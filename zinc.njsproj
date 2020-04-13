@@ -1,0 +1,151 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>zinc</Name>
+    <RootNamespace>zinc</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>cb95f7f4-591b-4699-a6f1-9b0dfc2e5e22</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>
+    </NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="html\CharacterSheet.html" />
+    <Content Include="html\LimitedSheet.html" />
+    <Content Include="graphics\5e Icons.svg" />
+    <Content Include="graphics\attacks\melee.svg" />
+    <Content Include="graphics\attacks\ranged.svg" />
+    <Content Include="graphics\attacks\thrown.svg" />
+    <Content Include="graphics\conditions\blinded.svg" />
+    <Content Include="graphics\conditions\charmed.svg" />
+    <Content Include="graphics\conditions\deafened.svg" />
+    <Content Include="graphics\conditions\exhaustion.svg" />
+    <Content Include="graphics\conditions\frightened.svg" />
+    <Content Include="graphics\conditions\grappled.svg" />
+    <Content Include="graphics\conditions\incapacitated.svg" />
+    <Content Include="graphics\conditions\invisible.svg" />
+    <Content Include="graphics\conditions\paralyzed.svg" />
+    <Content Include="graphics\conditions\petrified.svg" />
+    <Content Include="graphics\conditions\poisoned.svg" />
+    <Content Include="graphics\conditions\prone.svg" />
+    <Content Include="graphics\conditions\restrained.svg" />
+    <Content Include="graphics\conditions\stunned.svg" />
+    <Content Include="graphics\conditions\unconscious.svg" />
+    <Content Include="graphics\damagetypes\acid.svg" />
+    <Content Include="graphics\damagetypes\bludgeoning.svg" />
+    <Content Include="graphics\damagetypes\cold.svg" />
+    <Content Include="graphics\damagetypes\fire.svg" />
+    <Content Include="graphics\damagetypes\force.svg" />
+    <Content Include="graphics\damagetypes\lightning.svg" />
+    <Content Include="graphics\damagetypes\necrotic.svg" />
+    <Content Include="graphics\damagetypes\piercing.svg" />
+    <Content Include="graphics\damagetypes\poison.svg" />
+    <Content Include="graphics\damagetypes\psychic.svg" />
+    <Content Include="graphics\damagetypes\radiant.svg" />
+    <Content Include="graphics\damagetypes\slashing.svg" />
+    <Content Include="graphics\damagetypes\thunder.svg" />
+    <Content Include="graphics\shapes\cone.svg" />
+    <Content Include="graphics\shapes\cube.svg" />
+    <Content Include="graphics\shapes\cylinder.svg" />
+    <Content Include="graphics\shapes\line.svg" />
+    <Content Include="graphics\shapes\sphere.svg" />
+    <Content Include="graphics\spells\castingtime.svg" />
+    <Content Include="graphics\spells\concentration.svg" />
+    <Content Include="graphics\spells\meleespell.svg" />
+    <Content Include="graphics\spells\rangedspell.svg" />
+    <Content Include="graphics\spells\ritual.svg" />
+    <Content Include="lang\en.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="module.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="README.md" />
+    <Content Include="init.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="scripts\CharacterSheet.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="scripts\NPCSheet.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="scripts\registerSettings.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="scripts\updateStatusIcons.js">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="graphics\" />
+    <Folder Include="graphics\attacks\" />
+    <Folder Include="graphics\conditions\" />
+    <Folder Include="graphics\damagetypes\" />
+    <Folder Include="graphics\shapes\" />
+    <Folder Include="graphics\spells\" />
+    <Folder Include="lang\" />
+    <Folder Include="html\" />
+    <Folder Include="scripts\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,22 @@
+{
+  "name": "zinc",
+  "title": "Zinc Character and Item Sheets",
+  "description": "Adds Character sheets that are more in-line with D&D Beyond.",
+  "author": "Tielc#7179",
+  "version": "0.0.2",
+  "minimumCoreVersion": "0.4.4",
+  "systems": [ "dnd5e" ],
+  "esmodules": [ "init.js" ],
+  "styles": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "url": "",
+  "manifest": "",
+  "download": ""
+}
